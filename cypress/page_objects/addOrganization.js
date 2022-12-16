@@ -17,13 +17,15 @@ class AddOrganizationPage {
     }
 
     get okButton() {
-        return cy.get('.vs-c-modal--features-button > .vs-c-btn').click();
+        return cy.get('.vs-c-modal--features-button > .vs-c-btn');
     }
+
 
     addOrganization(name) {
         this.organizationNameInput.type(name);
         this.nextButton.click();
         this.nextButton.click();
+        this.okButton.click();
     }
 }
 
